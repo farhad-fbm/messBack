@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "src/index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/src/index.js"
+    }
+  ],
+  "env": {
+    "MONGO_URI": "mongodb+srv://farhad:Password.messManagement.dell3340@messmanagement.cz4wj.mongodb.net/mess1?retryWrites=true&w=majority&appName=messManagement"
+  },
+  "regions": [
+    "all"
+  ]
+}
