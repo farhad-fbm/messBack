@@ -6,7 +6,7 @@ const dotenv = require('dotenv');
 const connectDB = require('./config/db');
 const memberRoutes = require('./routes/memberRoutes');
 const mealRoutes = require('./routes/mealRoutes');
-// const bazarRoutes = require('./routes/bazarRoutes');
+const bazarRoutes = require('./routes/bazarRoutes');
 const recipeRoutes = require('./routes/recipeRoutes');
 const authRoutes = require('./routes/authRoutes');
 
@@ -21,7 +21,7 @@ app.use(express.json());
 // Routes
 app.use('/api/members', memberRoutes);
 app.use('/api/dailymeals', mealRoutes);
-// app.use('/api/dailybazars', bazarRoutes);
+app.use('/api/dailybazars', bazarRoutes);
 app.use('/api/recipes', recipeRoutes);
 app.use('/api/auth', authRoutes);
 
